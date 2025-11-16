@@ -2,13 +2,14 @@ import * as React from 'react'
 
 export interface IHelloProps {}
 
-const apiHost = import.meta.env.DEV ? 'http://localhost:4280' : 'https://<SWA URL>.azurestaticapps.net'
+// const apiHost = import.meta.env.DEV ? 'http://localhost:4280' : 'https://<SWA URL>.azurestaticapps.net'
 
 export const Hello: React.FunctionComponent<IHelloProps> = (props: React.PropsWithChildren<IHelloProps>) => {
   const [name, setName] = React.useState({ firstName: '', lastName: '' })
 
   const fetchName = async () => {
-    const apiUrl = `${apiHost}/api/name`
+    // const apiUrl = `${apiHost}/api/name`
+    const apiUrl = `/api/name`
     try {
       const response = await fetch(apiUrl)
       const { firstName, lastName } = await response.json()
