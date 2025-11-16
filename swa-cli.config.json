@@ -7,7 +7,7 @@
       "appDevserverUrl": "http://localhost:4321",
       "apiLocation": "./api",
       "apiLanguage": "node",
-      "apiVersion": "18",
+      "apiVersion": "20",
       "apiDevserverUrl": "http://localhost:7071"
     }
   }
