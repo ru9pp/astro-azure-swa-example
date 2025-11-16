@@ -5,10 +5,12 @@
   "scripts": {
     "build": "npm run build:app && npm run build:api",
     "build:app": "cd app && npm run build",
-    "build:api": "echo 'NO API build step configured'",
+    "build:api": "cd api && npm run build",
     "dev": "npm-run-all --parallel dev:*",
     "dev:swa": "swa start",
-    "dev:app": "cd app && npm run dev"
+    "dev:app": "cd app && npm run dev",
+    "dev:api": "cd api && npm run start",
+    "dev:api_watch": "cd api && npm run watch"
   },
   "keywords": [],
   "author": "",
