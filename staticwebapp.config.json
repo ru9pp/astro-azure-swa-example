@@ -1,0 +1,30 @@
+{
+  "trailingSlash": "auto",
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "routes": [
+    {
+      "route": "/success",
+      "allowedRoles": ["admin"]
+    },
+    {
+      "route": "/api/*",
+      "allowedRoles": ["admin"]
+    },
+    {
+      "route": "/login",
+      "rewrite": "/.auth/login/aad?post_login_redirect_uri=/success"
+    },
+    {
+      "route": "/logout",
+      "redirect": "/.auth/logout"
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/login",
+      "statusCode": 302
+    }
+  }
+}
